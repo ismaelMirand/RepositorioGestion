@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Simple Sidebar - Start Bootstrap Template</title>
+</head>
+
+<body>
+  <!-- Superior Bar -->
+  
+    <div class="row menu-trigger" (click)="isOpen = !isOpen">
+      <div class="col-md-5">
+      <i class="fa fa-bars fa-2x"  aria-hidden="true"></i>
+    </div>
+    </div>
+  
+  <div class="d-flex" id="wrapper">
+    
+
+    <!-- Sidebar -->
+    <!----------------------------------------------------->
+    <div class="bg-light border-right side-menu" *ngIf="isOpen"[@sideMenu]  id="sidebar-wrapper">
+     <div class="menu-close" (click)="isOpen = !isOpen">
+      
+     </div>
+      <div class="sidebar-heading">
+        <div class="user-panel">
+          <div class="cell">
+            <img width="100" alt="UBB logo" class="rounded mx-auto d-block" src="../assets/img/logo-ubb.png">
+          </div>
+          <br>
+        <div class="cell">
+            <p id="titulo">Ingenieria civil en informatica</p>
+          </div>
+        </div>  
+        
+      </div>
+
+      <!-- Menu -->
+      <div class="sidebar left menuDashbar">
+        <ul class="list-sidebar bg-defoult">
+          <li><a href="/home"><i class="fa fa-suitcase" aria-hidden="true"></i>Home</a></li>
+          
+          <li class="for" > <a href="/primer" data-toggle="collapse" data-target="#productos" class="collapsed active"> 
+                <i class="fa fa-th-large"></i> 
+               Primer Año
+              </a>
+          </li>
+          <li class="for" > <a href="/segundo" data-toggle="collapse" data-target="#productos" class="collapsed active"> 
+            <i class="fa fa-th-large"></i> 
+           Segundo Año
+          </a>
+          </li>
+          <li class="for" > <a href="/tercero" data-toggle="collapse" data-target="#productos" class="collapsed active"> 
+            <i class="fa fa-th-large"></i> 
+           Tercero Año
+          </a>
+         </li>
+          <li class="for" > <a href="/cuarto" data-toggle="collapse" data-target="#productos" class="collapsed active"> 
+          <i class="fa fa-th-large"></i> 
+            Cuarto Año
+          </a>
+          </li>
+          <li class="for" > <a href="/quinto" data-toggle="collapse" data-target="#productos" class="collapsed active"> 
+            <i class="fa fa-th-large"></i> 
+            Quinto Año
+             </a>
+          </li>  
+          
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+
+      <!-- Inner Content -->
+      <div class="container-fluid boi">
+
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<div class="mainContainer">  
+    <div class="content">
+        <div class="header">
+            <h1> Subir Archivo</h1>
+        </div>
+        <div class="row ">
+  
+            <div class="col-md-4">
+  
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    
+                    <div class="custom-file">
+                        <form action="/api/uploads" method="post" enctype="multipart/form-data">
+                            <input (change)="fileChange($event)"  type="file"  class="custom-file-input"  id="inputGroupFile01"  aria-describedby="inputGroupFileAddon01"> 
+                        </form>
+                        <label class="custom-file-label" for="inputGroupFile01">Elegir Archivo</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                     <div class="input-group-prepend">
+                        <button class="bg-info"  (click)="upload()"  id="btnUpload">Subir</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+  </div>  
+  <br> <br>
+  <div class="container">
+    <h2>Material del Ramo 	Álgebra y Trigonometría</h2>
+          
+    <table class="table table-striped">
+      <thead>
+        <tr class="bg-warning">
+          <th>Archivo</th>
+          <th>Materia del archivo</th>
+          <th>Email del autor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>mary@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
